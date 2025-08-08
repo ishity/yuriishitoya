@@ -20,6 +20,11 @@ h1, h2 {
     font-size: 2.0em;
 }
 
+a {
+    color: #6091d3;
+    text-decoration: none;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -60,11 +65,6 @@ header nav {
 
 .publication_detail {
     display: flex;
-}
-
-.publication_detail a {
-    color: #6091d3;
-    text-decoration: none;
 }
 
 .publication_authors {
