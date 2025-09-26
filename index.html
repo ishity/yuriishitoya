@@ -5,29 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Yuri Ishitoya</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- <header>
-        <h1>Yuri Ishitoya</h1>
-        <div class="nav">
-            <a href="#education">Esucation</a>
-            <a>Work Experience</a>
-            <a>Publications</a>
-            <a>Fellowships & Grants</a>
-            <a>Honors & Awards</a>
-            <a>Teaching</a>
-        </div>
-        
-    </header> -->
 
-    <div class="header">
+    <div class="hamburger-menu">
+        <div class="hamburger-icon" role="button" tabindex="0" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="menu" aria-label="Primary">
+            <ul>
+            <li><a href="#top">Top</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#work_experience">Work Experience</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#fellowships">Fellowships & Grants</a></li>
+            <li><a href="#honors_awards">Honors & Awards</a></li>
+            <li><a href="#teaching">Teaching</a></li>
+            <li><a href="#media">Media</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="header" id="top">
         <img src="image/icon.jpg" alt="Yuri Ishitoya" class="profile-image">
         <div>
             <h1>Yuri Ishitoya</h1>
             <p>yuuri.isty[at]gmail.com</p>
             <a href="https://drive.google.com/file/d/1UsoH2U4WNqcdO5Zurpzjh1NnIZhQt7Bl/view" target="_blank">Resume</a> | 
             <a href="https://www.linkedin.com/in/yuriishitoya/" target="_blank">LinkedIn</a> | 
-            <a href="https://x.com/ishity__" target="_blank">Twitter</a></p>
+            <a href="https://x.com/ishity__" target="_blank">Twitter</a> |
+            <a href="https://drive.google.com/file/d/1UsoH2U4WNqcdO5Zurpzjh1NnIZhQt7Bl/view?usp=sharing" target="_blank">Resume</a> | 
+            <a href="https://drive.google.com/file/d/1yyY88TghEvBWUARQgy2MHTjvft_BycuY/view?usp=sharing" target="_blank">CV</a>
         </div>
     </div class="header">
 
@@ -36,7 +47,7 @@
             Hi! I am a first-year master’s student at Ochanomizu University advised by <a href="https://www.koba.is.ocha.ac.jp/kobalab/index.php/aboutus/ichirokobayashi/">Ichiro Kobayashi</a>.　I am currently a visiting student at the <a href="https://www.dfki.de/web/ueber-uns/standorte-kontakt/saarbruecken">DFKI Saarbrücken</a> in Germany and at <a href="https://vislang.ai/">Rice University</a> in the United States.
         </p>
         <p>
-            My research focuses on the responsible AI and societal impacts of AI, and recently bias detection and mitigation in NLP. 
+            My research focuses on Trustworthy NLP, AI safety, LLM Interpretability & Representation Analysis. 
         </p>
         <p>
             Please feel free to email me! ✉️
@@ -70,7 +81,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="work_experience">
         <h2>Work Experience</h2>
         <div class="publication">
             <strong>Software Engineer</strong>
@@ -93,7 +104,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="publications">
         <h2>Publications</h2>
         <div class="publication">
             <strong>A study on detecting subtle biases by expanding the log-likelihood into a frequency space</strong>
@@ -128,7 +139,7 @@
 
     </section>
 
-    <section>
+    <section id="fellowships">
         <h2>Fellowships & Grants</h2>
         <div class="publication">
             <strong>Tobitate! Study Abroad Initiative</strong>
@@ -146,7 +157,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="honors_awards">
         <h2>Honors & Awards</h2>
         <strong>Research Awards:</strong>
         <ul> 
@@ -163,14 +174,14 @@
         </ul>
     </section>
 
-    <section>
+    <section id="teaching">
         <h2>Teaching</h2>
         <ul>
             <li>Spring 2025: "Introduction to Natural Language Theory" at Ochanomizu University</li>
         </ul>
     </section>
 
-    <section>
+    <section id="media">
         <h2>Media</h2>
         <ul>
             <li>

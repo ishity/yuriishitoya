@@ -77,3 +77,173 @@ footer {
     background: #fff;
     font-size: 0.9em;
 }
+
+
+/* ハンバーガーアイコン */
+.hamburger-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 30px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1001;
+}
+
+/* ハンバーガーの線 */
+.hamburger-icon span {
+    width: 30px;
+    height: 1.5px;
+    background: #444;
+    transition: transform 0.3s, opacity 0.3s;
+    position: absolute;
+}
+
+/* 1本目（上の線） */
+.hamburger-icon span:nth-child(1) {
+    top: 0;
+}
+
+/* 2本目（中央の線） */
+.hamburger-icon span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* 3本目（下の線） */
+.hamburger-icon span:nth-child(3) {
+    bottom: 0;
+}
+
+/* フルスクリーンメニュー */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* メニューが開いたとき */
+.menu.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* メニューのリンク */
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.menu li {
+    margin: 20px 0;
+}
+
+.menu a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #ddd;
+}
+.hamburger-menu.active .hamburger-icon span {
+    background: #fff;
+}
+/* ハンバーガーアイコンが「×」に変形 */
+.hamburger-menu.active .hamburger-icon span:nth-child(1) {
+    transform: translateY(12px) rotate(45deg);
+}
+
+.hamburger-menu.active .hamburger-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .hamburger-icon span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/* --- ベース: モバイルは既存のオーバーレイメニューのまま --- */
+
+/* トップに固定して重なり順を確保 */
+.hamburger-menu {
+    position: fixed;   /* ← ページの左上に固定 */
+    top: 20px;         /* 上からの余白 */
+    right: 20px;        /* 左からの余白 */
+    z-index: 1000;     /* 他の要素の上に出す */
+    background: transparent; /* 背景を透明のままにする */
+}
+
+/* --- ここからデスクトップ（>= 900px）はトップバー表示 --- */
+@media (min-width: 900px) {
+    .hamburger-menu {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: #fff;
+    }
+
+    /* ハンバーガーは隠す */
+    .hamburger-icon {
+        display: none;
+    }
+
+    /* メニューを常時表示の水平バーにする */
+    .menu {
+        position: sticky;
+        top: 0;
+        left: 0;
+        height: auto;
+        background: #fff;
+        opacity: 1;
+        visibility: visible;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: none;             /* フェード不要 */
+        border-bottom: 1px solid #eee;
+        padding: 8px 0;
+    }
+
+    .menu ul {
+        display: flex;
+        gap: 24px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu li {
+        margin: 0;
+    }
+
+    .menu a {
+        /* color: #6091d3; */
+        color: #444;
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    /* オーバーレイ用のactive状態は効かないようにする */
+    .menu.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
